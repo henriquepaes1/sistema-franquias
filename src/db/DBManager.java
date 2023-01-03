@@ -12,6 +12,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
+
+
 public class DBManager {
 	public static Connection conn = null;
 	
@@ -21,7 +23,7 @@ public class DBManager {
 		try(FileInputStream fileReader = new FileInputStream("db.properties")) {
 			props.load(fileReader);
 		} catch (FileNotFoundException e) {
-			throw new DBException("Unexpected Error:" + e.getMessage());
+			throw new DBException("Unexpected Error: " + e.getMessage());
 		} catch (IOException e) {
 			throw new DBException("Unexpected Error:" + e.getMessage());
 		}
@@ -29,12 +31,13 @@ public class DBManager {
 	}
 	
 	public static Connection getConnection() {
+		
 		if(conn == null) {
 			Properties connProps = loadProperties();
 			try {
 				conn = DriverManager.getConnection(connProps.getProperty("db-url"), connProps);
 			} catch (SQLException e) {
-				throw new DBException("Unexpected Error:" + e.getMessage());
+				throw new DBException("Unexpected Error: " + e.getMessage());
 			}
 		}
 		return conn;

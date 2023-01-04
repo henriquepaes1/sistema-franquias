@@ -105,8 +105,11 @@ public class Employee implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + "]";
+		return "Employee [id=" + id + ", name=" + name + ", startDate=" + startDate + ", email=" + email
+				+ ", department=" + department + ", wage=" + wage + "]";
 	}
+
+	
 	
 
 }

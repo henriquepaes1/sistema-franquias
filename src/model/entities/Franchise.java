@@ -82,7 +82,10 @@ public class Franchise implements Serializable{
 		return id == other.id;
 	}
 
-	
-	
+	@Override
+	public String toString() {
+		return "Franchise [id=" + id + ", address=" + address + ", size=" + size + ", employeeQuantity="
+				+ employeeQuantity + ", foundation=" + foundation + "]";
+	}
 
 }

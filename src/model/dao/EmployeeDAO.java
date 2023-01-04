@@ -14,21 +14,17 @@ public class EmployeeDAO implements IDAO<Employee> {
 	}
 
 	@Override
-	public int insert(Employee obj) {
-		// TODO Auto-generated method stub
-		return 0;
+	public void insert(Employee obj) {
+		
 	}
 
 	@Override
-	public int update(Employee obj) {
-		// TODO Auto-generated method stub
-		return 0;
+	public void update(Employee obj) {
+		
 	}
 
 	@Override
-	public int deleteById(int id) {
-		// TODO Auto-generated method stub
-		return 0;
+	public void deleteById(int id) {
 	}
 
 	@Override
